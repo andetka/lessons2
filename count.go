@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	texts, err := datafile.GetStrings(votes.txt)
+	texts, err := datafile.GetStrings("votes.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

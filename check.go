@@ -4,8 +4,15 @@ import (
 	"fmt"
 )
 
+type Number int
+
+func (n *Number) Double() {
+	*n *= 2
+}
+
 func main() {
-	number := 3
-	n, err := fmt.Println(number)
-	fmt.Println(n, err)
+	n := Number(4)
+	fmt.Println("Первоначальное значение номера", n)
+	n.Double()
+	fmt.Println("Новое значение номера", n)
 }
